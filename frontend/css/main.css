@@ -1,3 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+html {
+  font-family: Commissioner, sans-serif;
+  font-size: 10px;
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+.header {
+  background: url(../images/image-hero-desktop.jpg) no-repeat;
+  background-size: cover;
+  height: 44rem;
+  padding: 6rem 18.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.header__nav {
+  display: flex;
+  gap: 3rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: white;
+}
+.header__nav a:hover {
+  text-decoration: underline;
+}
 
 /*# sourceMappingURL=main.css.map */

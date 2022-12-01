@@ -1,0 +1,21 @@
+.header {
+    background: url(../images/image-hero-desktop.jpg) no-repeat;
+    background-size: cover;
+    height: 44rem;
+    padding: 6rem 18.2rem;
+    display: flex;
+    justify-content: space-between;
+
+    &__nav {
+        display: flex;
+        gap: 3rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: $color-white;
+
+        a:hover {
+            text-decoration: underline;
+        }
+        
+    }
+}
