@@ -1,0 +1,27 @@
+main {
+    background-color: $color-light-gray;
+    min-height: 100vh;
+}
+
+.section-first {
+    background-color: $color-white;
+    padding: 5rem 4rem 3rem;
+
+    &__title {
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    &__paragraph {
+        font-size: 1.8rem;
+        color: $color-dark-gray;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    &__btns {
+        display: flex;
+        justify-content: space-between;
+    }
+}
