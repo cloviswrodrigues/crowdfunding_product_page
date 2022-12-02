@@ -5,7 +5,20 @@ main {
 
 .section-first {
     background-color: $color-white;
-    padding: 5rem 4rem 3rem;
+    padding: 6rem 4rem 4.5rem;
+    position: relative;
+    top: -10rem;
+    border-radius: 1rem;
+
+    &::before {
+        content: '';
+        background: url(../images/logo-mastercraft.svg) no-repeat;
+        width: 56px;
+        height: 56px;
+        position: absolute;
+        top: -28px;
+        left: calc(50% - 4rem);
+    }
 
     &__title {
         font-size: 3rem;
@@ -17,11 +30,40 @@ main {
         font-size: 1.8rem;
         color: $color-dark-gray;
         text-align: center;
-        margin-bottom: 3rem;
+        margin-bottom: 3.5rem;
     }
 
     &__btns {
         display: flex;
         justify-content: space-between;
+    }
+}
+
+.btn {
+    padding: 1.8rem 3.5rem;
+    border-radius: 4rem;            
+    font-size: 1.6rem;
+    font-weight: 700;
+
+    &-cyan {
+        background-color: $color-dark-cyan;
+        color: $color-white;
+    }
+
+    &-bookmark {
+        position: relative;
+        background-color: $color-medium-gray;
+        color: $color-dark-gray;
+        padding-left: 7rem;
+
+        svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            circle {
+                fill: $color-dark-gray;
+            }
+        }
     }
 }

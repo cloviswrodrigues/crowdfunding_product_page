@@ -46,7 +46,19 @@ main {
 
 .section-first {
   background-color: white;
-  padding: 5rem 4rem 3rem;
+  padding: 6rem 4rem 4.5rem;
+  position: relative;
+  top: -10rem;
+  border-radius: 1rem;
+}
+.section-first::before {
+  content: "";
+  background: url(../images/logo-mastercraft.svg) no-repeat;
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  top: -28px;
+  left: calc(50% - 4rem);
 }
 .section-first__title {
   font-size: 3rem;
@@ -57,11 +69,36 @@ main {
   font-size: 1.8rem;
   color: hsl(0deg, 0%, 48%);
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
 }
 .section-first__btns {
   display: flex;
   justify-content: space-between;
+}
+
+.btn {
+  padding: 1.8rem 3.5rem;
+  border-radius: 4rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.btn-cyan {
+  background-color: hsl(176deg, 72%, 28%);
+  color: white;
+}
+.btn-bookmark {
+  position: relative;
+  background-color: hsla(0deg, 0%, 48%, 0.1);
+  color: hsl(0deg, 0%, 48%);
+  padding-left: 7rem;
+}
+.btn-bookmark svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.btn-bookmark svg circle {
+  fill: hsl(0deg, 0%, 48%);
 }
 
 /*# sourceMappingURL=main.css.map */
