@@ -9,6 +9,10 @@ html {
   font-size: 10px;
 }
 
+body {
+  background-color: #fafafa;
+}
+
 a {
   all: unset;
   cursor: pointer;
@@ -40,15 +44,14 @@ a {
 }
 
 main {
-  background-color: #fafafa;
   min-height: 100vh;
+  position: relative;
+  top: -10rem;
 }
 
 .section-first {
   background-color: white;
   padding: 6rem 4rem 4.5rem;
-  position: relative;
-  top: -10rem;
   border-radius: 1rem;
 }
 .section-first::before {
