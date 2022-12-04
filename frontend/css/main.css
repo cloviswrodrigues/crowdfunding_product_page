@@ -109,6 +109,7 @@ main {
   background-color: white;
   padding: 4rem;
   border-radius: 1rem;
+  margin-bottom: 2.5rem;
 }
 .panel .wrapper {
   display: grid;
@@ -141,6 +142,28 @@ main {
   display: block;
   background: hsl(176deg, 50%, 47%);
   border-radius: 1rem;
+}
+
+.about {
+  background-color: white;
+  padding: 4rem;
+  border-radius: 1rem;
+  margin-bottom: 2.5rem;
+  color: hsl(0deg, 0%, 48%);
+}
+.about__title {
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+  color: hsl(0deg, 0%, 0%);
+}
+.about__paragraph {
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.plan {
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */
