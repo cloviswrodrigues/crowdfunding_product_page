@@ -163,7 +163,55 @@ main {
 }
 
 .plan {
-  display: none;
+  border: 1px solid rgba(122, 122, 122, 0.2);
+  border-radius: 1rem;
+  padding: 3rem;
+}
+.plan + .plan {
+  margin-top: 2.5rem;
+}
+.plan .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.plan__title {
+  font-size: 2rem;
+  color: hsl(0deg, 0%, 0%);
+}
+.plan__pledge {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: hsl(176deg, 50%, 47%);
+}
+.plan__paragraph {
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+.plan__left {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+}
+.plan__left span {
+  font-size: 3rem;
+  font-weight: 700;
+  color: hsl(0deg, 0%, 0%);
+  margin-right: 0.8rem;
+}
+.plan__btn {
+  font-size: 1.4rem;
+  color: white;
+  background-color: hsl(176deg, 72%, 28%);
+}
+.plan-disabled {
+  opacity: 0.5;
+}
+.plan-disabled .plan__btn {
+  background-color: hsl(0deg, 0%, 48%);
+  cursor: default;
 }
 
 /*# sourceMappingURL=main.css.map */
