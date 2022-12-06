@@ -46,8 +46,12 @@ main {
     font-weight: 700;
 
     &-cyan {
-        background-color: $color-dark-cyan;
+        background-color: $color-moderate-cyan;
         color: $color-white;
+
+        &:hover {
+            background-color: $color-dark-cyan;
+        }
     }
 
     &-bookmark {
@@ -182,7 +186,11 @@ main {
     &__btn {
         font-size: 1.4rem;
         color: $color-white;
-        background-color: $color-dark-cyan;
+        background-color: $color-moderate-cyan;
+
+        &:hover {
+            background-color: $color-dark-cyan;
+        }
     }
 
     &-disabled {

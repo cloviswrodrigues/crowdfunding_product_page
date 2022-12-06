@@ -87,8 +87,11 @@ main {
   font-weight: 700;
 }
 .btn-cyan {
-  background-color: hsl(176deg, 72%, 28%);
+  background-color: hsl(176deg, 50%, 47%);
   color: white;
+}
+.btn-cyan:hover {
+  background-color: hsl(176deg, 72%, 28%);
 }
 .btn-bookmark {
   position: relative;
@@ -204,6 +207,9 @@ main {
 .plan__btn {
   font-size: 1.4rem;
   color: white;
+  background-color: hsl(176deg, 50%, 47%);
+}
+.plan__btn:hover {
   background-color: hsl(176deg, 72%, 28%);
 }
 .plan-disabled {
