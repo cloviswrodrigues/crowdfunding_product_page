@@ -59,15 +59,32 @@ main {
         background-color: $color-medium-gray;
         color: $color-dark-gray;
         padding-left: 7rem;
+        transition: all .5s;
 
         svg {
             position: absolute;
             top: 0;
-            left: 0;
+            left: 0;            
 
             circle {
-                fill: $color-dark-gray;
+                fill: $color-dark-gray;                
+                transition: all .5s;
             }
+        }
+
+        &--marked {
+            background-color: rgba($color-moderate-cyan, .1);
+            color: $color-dark-cyan;
+
+            svg {
+                circle {
+                    fill: $color-dark-cyan;
+                }
+
+                path {
+                    fill: $color-white;
+                }
+            }            
         }
     }
 }

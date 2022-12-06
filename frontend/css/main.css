@@ -18,6 +18,10 @@ a {
   cursor: pointer;
 }
 
+button {
+  border: none;
+}
+
 .container {
   max-width: 144rem;
   width: 50%;
@@ -98,6 +102,7 @@ main {
   background-color: hsla(0deg, 0%, 48%, 0.1);
   color: hsl(0deg, 0%, 48%);
   padding-left: 7rem;
+  transition: all 0.5s;
 }
 .btn-bookmark svg {
   position: absolute;
@@ -106,6 +111,17 @@ main {
 }
 .btn-bookmark svg circle {
   fill: hsl(0deg, 0%, 48%);
+  transition: all 0.5s;
+}
+.btn-bookmark--marked {
+  background-color: rgba(60, 180, 172, 0.1);
+  color: hsl(176deg, 72%, 28%);
+}
+.btn-bookmark--marked svg circle {
+  fill: hsl(176deg, 72%, 28%);
+}
+.btn-bookmark--marked svg path {
+  fill: white;
 }
 
 .panel {
