@@ -236,4 +236,48 @@ main {
   cursor: default;
 }
 
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal__content {
+  display: inline-block;
+  background-color: white;
+  padding: 4rem;
+  border-radius: 1rem;
+}
+.modal__content--sucess {
+  width: 42rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal__content--sucess svg {
+  margin-bottom: 4rem;
+}
+.modal__content--sucess h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.modal__content--sucess p {
+  font-size: 1.4rem;
+  color: hsl(0deg, 0%, 48%);
+  text-align: center;
+  line-height: 2.5rem;
+  margin-bottom: 3rem;
+}
+.modal__content--sucess .btn {
+  font-size: 1.4rem;
+  color: white;
+  background-color: hsl(176deg, 50%, 47%);
+  padding: 1.5rem 3rem;
+}
+
 /*# sourceMappingURL=main.css.map */
