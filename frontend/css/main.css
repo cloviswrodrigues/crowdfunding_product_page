@@ -236,6 +236,11 @@ main {
   cursor: default;
 }
 
+.active-modal {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -246,12 +251,17 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  visibility: hidden;
 }
 .modal__content {
   display: inline-block;
   background-color: white;
   padding: 4rem;
   border-radius: 1rem;
+  transform: translateY(30%);
+  opacity: 0;
+  animation: animeUp 0.5s forwards;
 }
 .modal__content--sucess {
   width: 42rem;
@@ -278,6 +288,18 @@ main {
   color: white;
   background-color: hsl(176deg, 50%, 47%);
   padding: 1.5rem 3rem;
+  cursor: pointer;
+}
+.modal__content--sucess .btn:hover {
+  background-color: hsl(176deg, 72%, 28%);
+}
+
+@keyframes animeUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -220,6 +220,11 @@ main {
     }
 }
 
+.active-modal {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
 .modal {
     position: fixed;
     top: 0;
@@ -230,12 +235,17 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    visibility: hidden;
 
     &__content {
         display: inline-block;
         background-color: $color-white;
         padding: 4rem;
-        border-radius: 1rem;
+        border-radius: 1rem;        
+        transform: translateY(30%);        
+        opacity: 0;
+        animation: animeUp .5s forwards;
 
         &--sucess {
             width: 42rem;
@@ -265,7 +275,20 @@ main {
                 color: $color-white;
                 background-color: $color-moderate-cyan;
                 padding: 1.5rem 3rem;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $color-dark-cyan;
+                }
             }
         }
+    }
+}
+
+@keyframes animeUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
     }
 }

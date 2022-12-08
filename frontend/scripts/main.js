@@ -11,3 +11,12 @@ function btnMarked(e) {
 }
 
 btnBookmark.addEventListener('click', btnMarked)
+
+const btnSucess = document.querySelector('.js-btn-sucess');
+const modal = document.querySelector('.js-modal-sucess');
+
+function closeModal() {
+    modal.classList.remove('active-modal');
+}
+
+btnSucess.addEventListener('click', closeModal)
