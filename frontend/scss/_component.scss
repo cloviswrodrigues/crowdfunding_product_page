@@ -89,6 +89,24 @@ main {
     }
 }
 
+.btn-small {
+    padding: 1.2rem 2rem;
+
+    &--cyan {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: $color-white;
+        background-color: $color-moderate-cyan;
+        border: 1px solid $color-moderate-cyan;
+        border-radius: 4rem;
+
+        &:hover {            
+            background-color: $color-dark-cyan;
+            border: 1px solid $color-dark-cyan;
+        }
+    }
+}
+
 .panel {
     background-color: $color-white;
     padding: 4rem;
@@ -188,15 +206,30 @@ main {
     }
 
     &__left {
-        display: flex;
+        display: inline-block;
         align-items: center;
         font-size: 1.4rem;
 
-        span {
-            font-size: 3rem;
-            font-weight: 700;
-            color: $color-black;
-            margin-right: .8rem;
+        &--small {
+            color: $color-dark-gray;
+            float: right;
+
+            span {
+                font-size: 1.6rem;
+                font-weight: 700;
+                color: $color-black;
+                margin-right: .5rem;
+            }
+        }
+
+        &--large {
+            span {
+                font-size: 3rem;
+                font-weight: 700;
+                color: $color-black;
+                margin-right: .8rem;            
+                vertical-align: middle;
+            }
         }
     }
 
@@ -288,14 +321,16 @@ main {
             display: flex;
             flex-direction: column;
 
-          
-
+            h2 {
+                font-size: 1.6rem;
+                font-weight: 700;
+                margin-bottom: 1rem;
+            }
 
             p {
                 font-size: 1.4rem;
                 color: $color-dark-gray;
                 line-height: 2.5rem;
-                margin-left: 2.8rem;
             }
         }
     }
@@ -305,8 +340,44 @@ main {
         flex-direction: column;
         gap: 1rem;
         border: 1px solid rgba($color-dark-gray, .3);
-        border-radius: 1rem;
+        border-radius: 1rem;        
+        margin-top: 2rem;        
+    }
+
+    &__plan {
         padding: 3rem;
+
+        p {
+            margin-left: 4.5rem;
+        }
+    }
+
+    &__emphasis {
+    
+        &-cyan {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: $color-moderate-cyan;
+            margin-left: 1.5rem;
+        }
+    }
+
+    &__form-pledge {
+        border-top: 1px solid rgba($color-dark-gray, .2);
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+
+        label {
+            font-size: 1.4rem;            
+            color: $color-dark-gray;
+            margin-right: 1rem;
+            flex-grow: 1;
+        }
+
+        input {
+            margin-right: 1rem;
+        }
     }
 }
 
@@ -350,6 +421,29 @@ main {
             margin-bottom: 4px;
         }
     }
+}
+
+.input-coin {    
+    outline: 1px solid rgba($color-dark-gray, 1);
+    border: none;
+    padding: 1.2rem 2rem;
+    border-radius: 4rem;
+    text-align: center;
+    width: 8rem;
+    font-family: Commissioner, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    &:focus {
+        outline: 1px solid rgba($color-moderate-cyan, 1);
+    }
+}
+
+.dollar-sign {
+    position: relative;
+    left: 2.5rem;
+    font-size: 1.5rem;
+    color: $color-dark-gray;
 }
 
 @keyframes animeUp {
