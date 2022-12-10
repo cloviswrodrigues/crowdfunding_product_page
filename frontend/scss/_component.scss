@@ -316,6 +316,23 @@ main {
             }
         }       
     }  
+
+    &__header {
+        height: auto;
+    }
+
+    &__close {
+        background: url(../images/icon-close-modal.svg) no-repeat;
+        width: 15px;
+        height: 15px;
+        float: right;
+        cursor: pointer;
+        opacity: .5;
+
+        &:hover {
+            opacity: 1;
+        }        
+    }
 }
 
 .pledge {
@@ -324,7 +341,7 @@ main {
     flex-direction: column;
 
     h2 {
-        font-size: 1.6rem;
+        font-size: 2rem;
         font-weight: 700;
         margin-bottom: 1rem;
     }
