@@ -314,25 +314,25 @@ main {
                     background-color: $color-dark-cyan;
                 }
             }
-        }
+        }       
+    }  
+}
 
-        &--pledge {
-            width: 60rem;
-            display: flex;
-            flex-direction: column;
+.pledge {
+    width: 60rem;
+    display: flex;
+    flex-direction: column;
 
-            h2 {
-                font-size: 1.6rem;
-                font-weight: 700;
-                margin-bottom: 1rem;
-            }
+    h2 {
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
 
-            p {
-                font-size: 1.4rem;
-                color: $color-dark-gray;
-                line-height: 2.5rem;
-            }
-        }
+    p {
+        font-size: 1.4rem;
+        color: $color-dark-gray;
+        line-height: 2.5rem;
     }
 
     &__wrapper {
