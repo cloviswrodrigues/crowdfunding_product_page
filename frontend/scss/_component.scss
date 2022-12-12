@@ -391,7 +391,7 @@ main {
     &__form-pledge {
         border-top: 1px solid rgba($color-dark-gray, .2);
         padding: 2rem;
-        display: flex;
+        display: none;
         align-items: center;
 
         label {
@@ -419,6 +419,17 @@ main {
             height: 100%;
             background-color: transreparent;
         }
+    }
+}
+
+.active {
+
+    &-option {
+        border: 1px solid $color-moderate-cyan;
+    }
+
+    &-form {
+        display: flex !important;
     }
 }
 
