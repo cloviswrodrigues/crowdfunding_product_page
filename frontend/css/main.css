@@ -396,9 +396,12 @@ main {
 }
 .pledge__form-pledge {
   border-top: 1px solid rgba(122, 122, 122, 0.2);
-  padding: 2rem;
-  display: none;
+  padding: 0;
+  display: flex;
   align-items: center;
+  height: 0;
+  overflow-y: hidden;
+  transition: all 0.4s;
 }
 .pledge__form-pledge label {
   font-size: 1.4rem;
@@ -428,6 +431,8 @@ main {
 }
 .active-form {
   display: flex !important;
+  height: 85px;
+  padding: 2rem;
 }
 
 .input-radio input[type=radio] {

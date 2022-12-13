@@ -402,9 +402,13 @@ main {
 
     &__form-pledge {
         border-top: 1px solid rgba($color-dark-gray, .2);
-        padding: 2rem;
-        display: none;
+        padding: 0;
+        display: flex;
         align-items: center;
+        height: 0;
+        overflow-y: hidden;
+        transition: all .4s;
+
 
         label {
             font-size: 1.4rem;            
@@ -442,6 +446,8 @@ main {
 
     &-form {
         display: flex !important;
+        height: 85px;
+        padding: 2rem;
     }
 }
 
