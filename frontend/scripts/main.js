@@ -40,10 +40,10 @@ function closeModal() {
 }
 
 
-function activeForm(e) {
+function activeOption(e) {
+    disabledAllOptionsActive()
     inputId = e.target.id;
     if (inputWithForm.includes(inputId)){
-        disabledAllOptionsActive()
 
         pledgeWrapper = e.target.parentNode.parentNode.parentNode;
         form = pledgeWrapper.lastElementChild;
@@ -79,7 +79,7 @@ buttonsPledge.forEach((e) =>
 )
 
 inputsRadio.forEach((e) =>
-    e.addEventListener('click', activeForm)
+    e.addEventListener('click', activeOption)
 )
 
 

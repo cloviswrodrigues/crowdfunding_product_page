@@ -401,7 +401,6 @@ main {
     }
 
     &__form-pledge {
-        border-top: 1px solid rgba($color-dark-gray, .2);
         padding: 0;
         display: flex;
         align-items: center;
@@ -448,6 +447,7 @@ main {
         display: flex !important;
         height: 85px;
         padding: 2rem;
+        border-top: 1px solid rgba($color-dark-gray, .2);
     }
 }
 
