@@ -284,9 +284,16 @@ main {
     overflow-y: auto;
     display: none;
 
+    &--small {
+        width: 50rem;
+    }
+
+    &--large {
+        width: 68rem;
+    }
+
     &__content {
         display: block;
-        width: 68rem;
         background-color: $color-white;
         padding: 4rem;
         border-radius: 1rem;        

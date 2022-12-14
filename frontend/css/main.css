@@ -302,9 +302,14 @@ main {
   overflow-y: auto;
   display: none;
 }
+.modal--small {
+  width: 50rem;
+}
+.modal--large {
+  width: 68rem;
+}
 .modal__content {
   display: block;
-  width: 68rem;
   background-color: white;
   padding: 4rem;
   border-radius: 1rem;

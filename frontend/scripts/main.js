@@ -4,6 +4,7 @@ const modalClose = document.querySelector('.js-modal-close');
 const buttonsPledge = document.querySelectorAll('.js-btn-pledge');
 const inputsRadio = document.querySelectorAll('input[name="plan-pledge"]');
 const inputWithForm = ['pledge-option-2','pledge-option-3'];
+const forms = document.querySelectorAll('.pledge__form-pledge');
 
 function btnMarked(e) {
     btnBookmark.classList.toggle('btn-bookmark--marked');
@@ -69,6 +70,18 @@ function disabledAllOptionsActive() {
     })
 }
 
+function openModalSucess() {
+    let modalSucess = document.querySelector('.js-modal-sucess');
+    modalSucess.classList.add('active-modal');    
+    overflowHiddenActive('body');
+}
+
+function handleForm(e) {
+    e.preventDefault();
+    closeModal();
+    openModalSucess();
+}
+
 
 btnBookmark.addEventListener('click', btnMarked)
 btnSucess.addEventListener('click', closeModal)
@@ -82,5 +95,6 @@ inputsRadio.forEach((e) =>
     e.addEventListener('click', activeOption)
 )
 
-
-console.log(inputsRadio)
+forms.forEach((e) => {
+    e.addEventListener('click', handleForm)
+})
