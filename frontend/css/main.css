@@ -33,6 +33,10 @@ button {
   overflow: hidden;
 }
 
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 .header {
   background: url(../images/image-hero-desktop.jpg) no-repeat;
   background-size: cover;
@@ -473,7 +477,7 @@ main {
 .input-coin {
   outline: 1px solid #7a7a7a;
   border: none;
-  padding: 1.2rem 2rem;
+  padding: 1.2rem 2rem 1.2rem 2.8rem;
   border-radius: 4rem;
   text-align: center;
   width: 8rem;
