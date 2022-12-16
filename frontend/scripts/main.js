@@ -5,6 +5,7 @@ const buttonsPledge = document.querySelectorAll('.js-btn-pledge');
 const inputsRadio = document.querySelectorAll('input[name="plan-pledge"]');
 const inputWithForm = ['pledge-option-2','pledge-option-3'];
 const forms = document.querySelectorAll('.pledge__form-pledge');
+const inputsPledge = document.querySelectorAll('input[name="plan-value"]');
 
 function btnMarked(e) {
     btnBookmark.classList.toggle('btn-bookmark--marked');
@@ -76,19 +77,33 @@ function openModalSucess() {
     overflowHiddenActive('body');
 }
 
-function validateForm(form) {
-    let planValue = form['plan-value'];
-    let minValue = Number(planValue.dataset.minValue);
+function inputPledgeValidate(e) {
+    let input = e.target;
+    let minValue = Number(input.dataset.minValue);
+    let label = document.querySelector(`label[for="${input.id}"]`)
 
-    if (Number(planValue.value) < minValue) {
-        let label = document.querySelector(`label[for="${planValue.id}"]`)
+    if (Number(input.value) < minValue) {
         label.textContent = "value less than $"+ minValue;
         label.classList.add('msg-error');
+        input.classList.add('input-error');
+        input.classList.remove('valid');
         return false
+    }else {
+        label.textContent = "Enter your pledge";
+        label.classList.remove('msg-error');
+        input.classList.remove('input-error');
+        input.classList.add('valid');
     }
+}
 
+function validateForm(form) {
+    let planValue = form['plan-value'];
+    
+    if (planValue.className.includes('valid')){
+        return true
+    }  
 
-    return true
+    return false
 }
 
 function handleForm(e) {
@@ -115,4 +130,8 @@ inputsRadio.forEach((e) =>
 
 forms.forEach((e) => {
     e.addEventListener('submit', handleForm)
+})
+
+inputsPledge.forEach((e) => {
+    e.addEventListener('input', inputPledgeValidate)
 })
