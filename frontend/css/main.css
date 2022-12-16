@@ -501,6 +501,11 @@ main {
   color: hsl(0deg, 0%, 48%);
 }
 
+.msg-error {
+  color: red !important;
+  font-weight: 700;
+}
+
 @keyframes animeUp {
   to {
     transform: translateY(0);

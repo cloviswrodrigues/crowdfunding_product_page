@@ -76,10 +76,28 @@ function openModalSucess() {
     overflowHiddenActive('body');
 }
 
+function validateForm(form) {
+    let planValue = form['plan-value'];
+    let minValue = Number(planValue.dataset.minValue);
+
+    if (Number(planValue.value) < minValue) {
+        let label = document.querySelector(`label[for="${planValue.id}"]`)
+        label.textContent = "value less than $"+ minValue;
+        label.classList.add('msg-error');
+        return false
+    }
+
+
+    return true
+}
+
 function handleForm(e) {
     e.preventDefault();
-    closeModal();
-    openModalSucess();
+    let form = e.target;
+    if (validateForm(form)) {
+        closeModal();
+        openModalSucess();
+    }
 }
 
 
@@ -96,5 +114,5 @@ inputsRadio.forEach((e) =>
 )
 
 forms.forEach((e) => {
-    e.addEventListener('click', handleForm)
+    e.addEventListener('submit', handleForm)
 })
