@@ -8,6 +8,8 @@ $color-light-gray: #fafafa;
 $color-white: white;
 $color-red: rgba(255, 0, 0, 0.8);
 
+$break-mobile: 900px;
+
 * {
     margin: 0;
     padding: 0;
@@ -36,6 +38,10 @@ button {
     max-width: 144rem;
     width: 50%;
     margin: 0 auto;
+
+    @media screen and (max-width: $break-mobile) {
+        width: 90%;
+    }
 }
 
 .overflow-hidden {

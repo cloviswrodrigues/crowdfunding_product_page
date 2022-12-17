@@ -28,6 +28,11 @@ button {
   width: 50%;
   margin: 0 auto;
 }
+@media screen and (max-width: 900px) {
+  .container {
+    width: 90%;
+  }
+}
 
 .overflow-hidden {
   overflow: hidden;
@@ -67,6 +72,7 @@ main {
   padding: 6rem 4rem 4.5rem;
   border-radius: 1rem;
   margin-bottom: 2.5rem;
+  border: 1px solid hsla(0deg, 0%, 48%, 0.1);
 }
 .section-first::before {
   content: "";
@@ -91,6 +97,25 @@ main {
 .section-first__btns {
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 900px) {
+  .section-first {
+    padding: 4rem 2rem;
+  }
+  .section-first__title {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .section-first__paragraph {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    line-height: 2.5rem;
+  }
+  .section-first__btns {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .btn {
@@ -120,7 +145,7 @@ main {
   left: 0;
 }
 .btn-bookmark svg circle {
-  fill: hsl(0deg, 0%, 48%);
+  fill: hsl(0deg, 0%, 0%);
   transition: all 0.5s;
 }
 .btn-bookmark--marked {
@@ -132,6 +157,24 @@ main {
 }
 .btn-bookmark--marked svg path {
   fill: white;
+}
+@media screen and (max-width: 900px) {
+  .btn {
+    padding: 1.8rem 5rem;
+    font-size: 1.4rem;
+  }
+  .btn-cyan {
+    box-sizing: border-box;
+    height: 56px;
+  }
+  .btn-bookmark {
+    width: 56px;
+    height: 56px;
+    padding: 0;
+  }
+  .btn-bookmark span {
+    display: none;
+  }
 }
 
 .btn-small {

@@ -9,6 +9,7 @@ main {
     padding: 6rem 4rem 4.5rem;
     border-radius: 1rem;
     margin-bottom: 2.5rem;
+    border: 1px solid $color-medium-gray;
 
     &::before {
         content: '';
@@ -36,6 +37,27 @@ main {
     &__btns {
         display: flex;
         justify-content: space-between;
+    }
+
+    @media screen and (max-width: $break-mobile) {
+        padding: 4rem 2rem;
+    
+        &__title {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+    
+        &__paragraph {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            line-height: 2.5rem;
+        }
+    
+        &__btns {
+            display: flex;
+            justify-content: space-between;
+        }
     }
 }
 
@@ -68,7 +90,7 @@ main {
             left: 0;            
 
             circle {
-                fill: $color-dark-gray;                
+                fill: $color-black;                
                 transition: all .5s;
             }
         }
@@ -86,6 +108,26 @@ main {
                     fill: $color-white;
                 }
             }            
+        }
+    }
+
+    @media screen and (max-width: $break-mobile) {
+        padding: 1.8rem 5rem;
+        font-size: 1.4rem;
+
+        &-cyan {
+            box-sizing: border-box;
+            height: 56px;
+        }
+
+        &-bookmark {
+            width: 56px;
+            height: 56px;
+            padding: 0;
+            
+            span {
+                display: none;
+            }
         }
     }
 }
