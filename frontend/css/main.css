@@ -49,8 +49,15 @@ input[type=number]::-webkit-inner-spin-button {
   padding: 6rem 18.2rem;
   display: flex;
   justify-content: space-between;
-  position: relative .header __hamburguer;
-  position-display: none;
+  position: relative;
+}
+.header__links {
+  z-index: 999;
+}
+.header__icon-menu,
+.header .icon-hamburguer,
+.header .icon-close {
+  display: none;
 }
 .header__nav {
   display: flex;
@@ -69,10 +76,12 @@ input[type=number]::-webkit-inner-spin-button {
     background: url(../images/image-hero-mobile.jpg) no-repeat;
     background-size: 100%;
   }
-  .header__hamburguer {
+  .header__icon-menu {
     display: block;
   }
   .header__nav {
+    display: none;
+    opacity: 0;
     position: absolute;
     top: 8rem;
     right: 2rem;
@@ -85,12 +94,21 @@ input[type=number]::-webkit-inner-spin-button {
     font-size: 1.8rem;
     color: hsl(0deg, 0%, 0%);
     z-index: 999;
+    transform: translateX(5%);
+    animation: animeRight 0.3s forwards;
   }
   .header__nav a {
     padding: 2.5rem;
   }
   .header__nav a + a {
     border-top: 1px solid hsla(0deg, 0%, 48%, 0.1);
+  }
+  .header .icon-active {
+    display: block;
+  }
+  .header .mobile-active {
+    display: flex;
+    opacity: 1;
   }
 }
 
@@ -586,9 +604,28 @@ main {
   outline: 1px solid rgba(255, 0, 0, 0.5);
 }
 
+.darken::before {
+  content: "";
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: hsl(0deg, 0%, 0%);
+  opacity: 0.1;
+  z-index: 1;
+}
+
 @keyframes animeUp {
   to {
     transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes animeRight {
+  to {
+    transform: translateX(0);
     opacity: 1;
     visibility: visible;
   }

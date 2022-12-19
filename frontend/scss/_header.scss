@@ -5,9 +5,15 @@
     padding: 6rem 18.2rem;
     display: flex;
     justify-content: space-between;
-    position: relative
+    position: relative;
 
-    &__hamburguer {
+    &__links {
+        z-index: 999;
+    }
+
+    &__icon-menu,
+    .icon-hamburguer,
+    .icon-close {
         display: none;
     }
 
@@ -30,11 +36,13 @@
         background: url(../images/image-hero-mobile.jpg) no-repeat;
         background-size: 100%;
 
-        &__hamburguer {
+        &__icon-menu {
             display: block;
         }
 
         &__nav {
+            display: none;
+            opacity: 0;
             position: absolute;
             top: 8rem;
             right: 2rem;
@@ -47,6 +55,8 @@
             font-size: 1.8rem;
             color: $color-black;  
             z-index: 999;
+            transform: translateX(5%);
+            animation: animeRight .3s forwards;
             
             a {
                 padding: 2.5rem;
@@ -56,5 +66,15 @@
                 border-top: 1px solid $color-medium-gray;
             }
         }
+
+        .icon-active {
+            display: block;
+        }
+
+        .mobile-active {
+            display: flex;
+            opacity: 1;
+        }
     }
 }
+

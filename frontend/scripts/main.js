@@ -6,6 +6,10 @@ const inputsRadio = document.querySelectorAll('input[name="plan-pledge"]');
 const inputWithForm = ['pledge-option-2','pledge-option-3'];
 const forms = document.querySelectorAll('.pledge__form-pledge');
 const inputsPledge = document.querySelectorAll('input[name="plan-value"]');
+const iconMenuMobile = document.querySelector('.js-icon-menu');
+const iconHamburguer = document.querySelector('.icon-hamburguer');
+const iconClose = document.querySelector('.icon-close');
+const menuMobile = document.querySelector('.js-menu');
 
 function btnMarked(e) {
     btnBookmark.classList.toggle('btn-bookmark--marked');
@@ -115,6 +119,17 @@ function handleForm(e) {
     }
 }
 
+function toggleMenuMobile(e) {
+    console.log('toggle menu')
+    let body = document.querySelector('body');
+    body.classList.toggle('darken');
+    body.classList.toggle('overflow-hidden');
+    iconHamburguer.classList.toggle('icon-active');
+    iconClose.classList.toggle('icon-active');
+    menuMobile.classList.toggle('mobile-active');
+}
+
+iconMenuMobile.addEventListener('click', toggleMenuMobile)
 
 btnBookmark.addEventListener('click', btnMarked)
 btnSucess.addEventListener('click', closeModal)

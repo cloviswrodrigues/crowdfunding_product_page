@@ -1,0 +1,15 @@
+@keyframes animeUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes animeRight {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
