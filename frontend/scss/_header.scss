@@ -5,6 +5,11 @@
     padding: 6rem 18.2rem;
     display: flex;
     justify-content: space-between;
+    position: relative
+
+    &__hamburguer {
+        display: none;
+    }
 
     &__nav {
         display: flex;
@@ -17,5 +22,39 @@
             text-decoration: underline;
         }
         
+    }
+
+    @media screen and (max-width: $break-mobile) {
+        height: 33.5rem;
+        padding: 2rem;
+        background: url(../images/image-hero-mobile.jpg) no-repeat;
+        background-size: 100%;
+
+        &__hamburguer {
+            display: block;
+        }
+
+        &__nav {
+            position: absolute;
+            top: 8rem;
+            right: 2rem;
+            width: 100%;
+            max-width: 32.2rem;
+            flex-direction: column;
+            gap: 0;
+            background-color: $color-white;
+            border-radius: 1rem;
+            font-size: 1.8rem;
+            color: $color-black;  
+            z-index: 999;
+            
+            a {
+                padding: 2.5rem;
+            }
+
+            a + a {
+                border-top: 1px solid $color-medium-gray;
+            }
+        }
     }
 }
