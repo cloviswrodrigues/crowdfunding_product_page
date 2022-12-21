@@ -329,6 +329,28 @@ main {
             left: 0;
         }
     }
+
+    @media screen and (max-width: $break-mobile) {
+        padding: 2rem;
+
+        .wrapper {
+            flex-direction: column;      
+            align-items: flex-start;
+        }
+
+        &__title {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+
+        &__left {
+            margin-bottom: 2rem;
+        }
+
+        &__btn {
+            padding: 1.8rem 3.5rem;
+        }
+    }
 }
 
 .active-modal {
