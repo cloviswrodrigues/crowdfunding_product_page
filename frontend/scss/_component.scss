@@ -192,6 +192,25 @@ main {
             background: $color-moderate-cyan;
             border-radius: 1rem;
         }
+    }    
+
+    @media screen and (max-width: $break-mobile) {
+        .wrapper {
+            grid-template-columns: auto;
+            grid-template-rows: repeat(3, 1fr);
+            justify-items: center;
+        }
+
+        &__item {
+            padding: 2rem 0;
+            text-align: center;
+
+            &:nth-child(n+2) {
+                border-left: 0;
+                border-top: 2px solid rgba($color-dark-gray, .2);
+                padding-left: 0;
+            }
+        }        
     }
 }
 
