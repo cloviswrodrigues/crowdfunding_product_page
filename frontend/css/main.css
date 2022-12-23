@@ -547,7 +547,7 @@ main {
 }
 .pledge__emphasis-cyan {
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 500;
   color: hsl(176deg, 50%, 47%);
   margin-left: 4.5rem;
 }
@@ -601,8 +601,15 @@ main {
     bottom: 0;
     left: 3rem;
   }
+  .pledge__form-pledge {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   .pledge__form-pledge label {
-    font-size: 1.2rem;
+    width: 100%;
+    font-size: 1.4rem;
+    text-align: center;
+    padding-bottom: 2rem;
   }
 }
 
@@ -614,6 +621,11 @@ main {
   height: 85px;
   padding: 2rem;
   border-top: 1px solid rgba(122, 122, 122, 0.2);
+}
+@media screen and (max-width: 900px) {
+  .active-form {
+    height: 120px;
+  }
 }
 
 .input-radio input[type=radio] {
@@ -628,7 +640,7 @@ main {
   line-height: 11px;
 }
 .input-radio label {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 700;
   cursor: pointer;
 }

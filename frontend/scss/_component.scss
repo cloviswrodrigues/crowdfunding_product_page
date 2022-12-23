@@ -505,7 +505,7 @@ main {
     
         &-cyan {
             font-size: 1.4rem;
-            font-weight: 700;
+            font-weight: 500;
             color: $color-moderate-cyan;
             margin-left: 4.5rem;
         }
@@ -572,10 +572,15 @@ main {
             left: 3rem;
         }
 
-        &__form-pledge {    
+        &__form-pledge {
+            flex-wrap: wrap;
+            justify-content: center;
     
             label {
-                font-size: 1.2rem;
+                width: 100%;
+                font-size: 1.4rem;
+                text-align: center;
+                padding-bottom: 2rem;
             }
         }  
     }
@@ -592,6 +597,12 @@ main {
         height: 85px;
         padding: 2rem;
         border-top: 1px solid rgba($color-dark-gray, .2);
+    }
+
+    @media screen and (max-width: $break-mobile) { 
+        &-form { 
+            height: 120px;
+        }
     }
 }
 
@@ -610,7 +621,7 @@ main {
     }
 
     label {
-        font-size: 1.6rem;                
+        font-size: 1.4rem;                
         font-weight: 700;                
         cursor: pointer;
 
