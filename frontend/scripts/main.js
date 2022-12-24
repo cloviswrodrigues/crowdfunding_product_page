@@ -91,8 +91,7 @@ function inputPledgeValidate(e) {
         label.classList.add('msg-error');
         input.classList.add('input-error');
         input.classList.remove('valid');
-        return false
-    }else {
+    } else {
         label.textContent = "Enter your pledge";
         label.classList.remove('msg-error');
         input.classList.remove('input-error');
